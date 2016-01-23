@@ -56,6 +56,9 @@ public class PixelmonDataKeys {
     public static final Key<Value<String>> POKEMON_NICK_NAME = KeyFactory.makeSingleKey(String.class, Value.class, of("pokemonNickName"));
     public static final Key<Value<String>> POKEMON_BOSS_MODE = KeyFactory.makeSingleKey(String.class, Value.class, of("pokemonBossMode"));
     public static final Key<ListValue<Integer>> POKEMON_ID = KeyFactory.makeListKey(Integer.class, of("pokemonID"));
+    public static final Key<Value<Boolean>> POKEMON_IS_EGG = KeyFactory.makeSingleKey(Boolean.class, Value.class, of("pokemonIsEgg"));
+    public static final Key<Value<Boolean>> POKEMON_IS_SHINY = KeyFactory.makeSingleKey(Boolean.class, Value.class, of("pokemonIsShiny"));
+    public static final Key<Value<Integer>> POKEMON_SPECIAL_TEXTURE = KeyFactory.makeSingleKey(Integer.class, Value.class, of("pokemonSpecialTexture"));
 
     /**
      * Player specific keys
