@@ -10,6 +10,7 @@ import org.spongepowered.api.data.value.mutable.MapValue;
 import org.spongepowered.api.data.value.mutable.OptionalValue;
 import org.spongepowered.api.data.value.mutable.Value;
 import org.spongepowered.api.entity.EntitySnapshot;
+import org.spongepowered.api.item.inventory.ItemStackSnapshot;
 
 import java.util.Map;
 import java.util.Optional;
@@ -59,12 +60,18 @@ public class PixelmonDataKeys {
     public static final Key<Value<Boolean>> POKEMON_IS_EGG = KeyFactory.makeSingleKey(Boolean.class, Value.class, of("pokemonIsEgg"));
     public static final Key<Value<Boolean>> POKEMON_IS_SHINY = KeyFactory.makeSingleKey(Boolean.class, Value.class, of("pokemonIsShiny"));
     public static final Key<Value<Integer>> POKEMON_SPECIAL_TEXTURE = KeyFactory.makeSingleKey(Integer.class, Value.class, of("pokemonSpecialTexture"));
+    public static final Key<Value<ItemStackSnapshot>> POKEMON_HELD_ITEM = KeyFactory.makeSingleKey(ItemStackSnapshot.class, Value.class, of("pokemonHeldItem"));
+    public static final Key<OptionalValue<String>> POKEMON_ORIGINAL_TRAINER = KeyFactory.makeSingleKey((Class<Optional<String>>)(Class)Optional.class, OptionalValue.class, of("pokemonOriginalTrainer"));
+    public static final Key<Value<Integer>> POKEMON_ABILITY_SLOT = KeyFactory.makeSingleKey(Integer.class, Value.class, of("pokemonAbilitySlot"));
+    public static final Key<Value<String>> POKEMON_ABILITY_NAME = KeyFactory.makeSingleKey(String.class, Value.class, of("pokemonAbilityName"));
+
 
     /**
      * Player specific keys
      */
     public static final Key<MapValue<Integer, EntitySnapshot>> PARTY_POKEMON = KeyFactory.makeMapKey(Integer.class, EntitySnapshot.class, of("partyPokemon"));
     public static final Key<MapValue<Integer, Map<Integer, EntitySnapshot>>> COMPUTER_POKEMON = KeyFactory.makeMapKey(Integer.class, (Class<Map<Integer, EntitySnapshot>>)(Class)Map.class, of("computerPokemon"));
+    //TODO keys for the custom gui stuff.
 
     /**
      * Chatting npc specific keys

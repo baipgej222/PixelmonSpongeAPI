@@ -2,6 +2,7 @@ package com.pixelmonmod.pixelmonbridge.api;
 
 import com.google.common.base.Preconditions;
 import com.pixelmonmod.pixelmonbridge.api.utils.BlockHelper;
+import com.pixelmonmod.pixelmonbridge.api.utils.CommandArgsHelper;
 import com.pixelmonmod.pixelmonbridge.api.utils.ComputerHelper;
 import com.pixelmonmod.pixelmonbridge.api.utils.PlayerHelper;
 import com.pixelmonmod.pixelmonbridge.api.utils.PokemonHelper;
@@ -34,6 +35,13 @@ public final class PixelmonAPI {
     public static PlayerHelper getPlayerHelper() {
         Preconditions.checkState(playerHelper != null, "PlayerHelper was not initialized");
         return playerHelper;
+    }
+
+    private static final CommandArgsHelper commandArgsHelper = null;
+
+    public static CommandArgsHelper getCommandArgsHelper() {
+        Preconditions.checkState(commandArgsHelper != null, "CommandArgsHelper was not initialized");
+        return commandArgsHelper;
     }
 
 }
